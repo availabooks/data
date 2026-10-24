@@ -9,6 +9,14 @@
       "file": "sample-store.zip",
       "tables": 4,
       "rows": 544
+    },
+    {
+      "id": "art",
+      "name": "Art",
+      "description": "Famous paintings and where to see them: 4,294 works by 421 artists, in 57 museums around the world.\n\nartist gives each artist's name, nationality, style, and years of birth and death. museum gives each museum's address, city, country, phone and website, and museum_hours its opening and closing times for each day of the week. work lists the paintings, with the museum that holds each one, its artist, style, and size (width and height). subject gives the subjects of each work (a work can have several, like Flowers or Portraits), and work_image an image id for each work.\n\nThe tables link through artist_id, museum_id and work_id. Good for practising lookups (XLOOKUP), PivotTables, and joins in SQL for Excel.",
+      "file": "art.zip",
+      "tables": 6,
+      "rows": 11547
     }
   ]
 }
