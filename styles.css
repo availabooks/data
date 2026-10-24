@@ -1,0 +1,91 @@
+/* Colours come from JET's own theme (so dark mode works), with fallbacks for other hosts. */
+.app {
+  --fg: var(--jolt-fg, #1f1f1f);
+  --muted: var(--jolt-fg-2, #5c5c5c);
+  --line: var(--jolt-border, #d6d6d6);
+  --soft: var(--jolt-bg-2, #f5f5f5);
+  --accent: #1e7b3c;
+  --bad: var(--jolt-error, #c42b1c);
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  color: var(--fg);
+  font: 13px/1.45 "Segoe UI", system-ui, sans-serif;
+}
+.app h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.app header p,
+.app .status {
+  margin: 0;
+  color: var(--muted);
+}
+.app .error p {
+  margin: 0 0 8px;
+  color: var(--bad);
+}
+.app button {
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--soft);
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+}
+.app button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+.app button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.app .list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app .dataset {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.app .dataset.open {
+  border-color: var(--accent);
+}
+.app .dataset .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  text-align: left;
+}
+.app .dataset .name small {
+  flex: none;
+  color: var(--muted);
+  font-weight: normal;
+}
+.app .details {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 0 12px 12px;
+}
+.app .description p {
+  margin: 0 0 6px;
+  white-space: pre-line;
+}
+.app .check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}

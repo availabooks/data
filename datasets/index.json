@@ -1,0 +1,14 @@
+{
+  "format": "jolt-datasets",
+  "version": 1,
+  "datasets": [
+    {
+      "id": "sample-store",
+      "name": "Sample store",
+      "description": "A small, made-up office-supply shop: 40 customers, 12 products, and 150 orders from 2024 with the items in each one.\n\ncustomers, products and orders each have an _id column as their key. orders.customer_id says who placed an order, and order_items links each order to the products in it, with the quantity and the price paid.\n\nGood for practising lookups (XLOOKUP), PivotTables, and joins in SQL for Excel.",
+      "file": "sample-store.zip",
+      "tables": 4,
+      "rows": 544
+    }
+  ]
+}

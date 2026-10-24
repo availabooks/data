@@ -1,0 +1,10 @@
+{
+  "id": "jolt/data",
+  "name": "Datasets",
+  "version": "0.1.0",
+  "description": "A list of datasets to practise with. Click one to read what's in it, then import it: each table goes on a sheet of its own as an Excel Table. Optionally deletes the workbook's other sheets first.",
+  "permissions": { "hosts": ["excel"], "network": ["https://cdn.jsdelivr.net"] },
+  "funding": [],
+  "entry": "index.html",
+  "autoRun": "main.js#autoRun"
+}

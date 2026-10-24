@@ -1,0 +1,24 @@
+# jsDelivr caches what @main points to for up to 12 hours. After a push that changes datasets, purge
+# every file there, so the Datasets app sees the change within minutes. Run it by hand from the Actions tab
+# if a purge is ever needed without a push.
+name: Purge datasets from jsDelivr
+
+on:
+  push:
+    branches: [main]
+    paths: ["datasets/**"]
+  workflow_dispatch:
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Purge each file
+        run: |
+          git ls-files datasets | while IFS= read -r f; do
+            url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f"
+            echo "$url"
+            curl -fsS "$url"
+            echo
+          done
