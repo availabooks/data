@@ -17,6 +17,86 @@
       "file": "art.zip",
       "tables": 6,
       "rows": 11547
+    },
+    {
+      "id": "chicago-crime-2018",
+      "name": "Chicago crime, 2018",
+      "description": "28,500 crimes reported in Chicago in 2018, with when and where each happened, what kind of crime it was, and whether anyone was arrested.\n\ncrime has a row for each report: its date and time, block, type of place (like SIDEWALK or RESTAURANT), whether it was domestic and whether it led to an arrest, its latitude and longitude, and the police beat, district, ward and community area it was in. iucr and fbi_code describe the crime codes. district gives each police district's address, commander and contacts; ward each ward's alderman, office and population; community_area each of Chicago's 77 community areas, with its side of the city and population; and neighborhood the neighborhoods in each community area.\n\nThe tables link through district_no, ward_no, community_area_no, iucr_no and fbi_code_no. Good for PivotTables (crimes by month, type or area), crime rates per person, and joins in SQL for Excel.",
+      "file": "chicago-crime-2018.zip",
+      "tables": 7,
+      "rows": 29316
+    },
+    {
+      "id": "course-enrollment",
+      "name": "Course enrollment",
+      "description": "A small example of students enrolling in courses: 1,018 students, 40 course sections, and 40 enrollments.\n\nstudent gives each student's name, user id and email, address, age and birthday, major and GPA. course lists course sections, with the course code and name (like ACC231 or CIS105), the term (like SP23 or FA23) and the instructor. enrollment links a student to a section, with the date they enrolled.\n\nenrollment links to the other tables through student_id and course_id. Good for practising lookups (XLOOKUP) and joins, such as finding the students who aren't enrolled in anything.",
+      "file": "course-enrollment.zip",
+      "tables": 3,
+      "rows": 1098
+    },
+    {
+      "id": "hudson-clubs",
+      "name": "Hudson University clubs",
+      "description": "Student clubs at Hudson University: 233 clubs, 2,951 students and their memberships, and 2,211 club events from 2012 to 2024, with their budgets and expenses.\n\nclub gives each club's name, description and membership fee, and club_member who belongs to each club and which members are officers. student gives each student's name, phone, shirt size, home town and major, and major each major's department and division. event lists each club's events, with their dates, location, theme and category. budget sets out what each event planned to spend on each account (like Food and Beverage or Advertising), and expense records what students actually spent.\n\nThe tables link through club_code, student_id, event_id and major_code. Good for comparing budgets with spending, PivotTables, and joins in SQL for Excel.",
+      "file": "hudson-clubs.zip",
+      "tables": 7,
+      "rows": 21776
+    },
+    {
+      "id": "hudson-courses",
+      "name": "Hudson University courses",
+      "description": "Hudson University's course catalog and class schedule: 1,851 courses and 9,315 sections, over 11 terms from spring 2018 to spring 2023.\n\ncourse gives each course's title, description, department, credits, prerequisites, and the core and inquiry areas it counts toward. section lists the sections of each course in each term, with their status, delivery (in person, hybrid or online), enrollment cap and any approval needed. meeting gives the days, start time, length and room of each section's meetings; instruction says who teaches each section; and student_cap how many students each section allows and has enrolled, by category. The other tables describe departments, buildings, instructors, emphases (majors and minors), corequisites, cross-listed courses, enrollment restrictions, terms, delivery methods and approval codes.\n\nWith 16 linked tables, it's good for practising joins in SQL for Excel: every course an instructor taught, a room's schedule, or how full sections were.",
+      "file": "hudson-courses.zip",
+      "tables": 16,
+      "rows": 43881
+    },
+    {
+      "id": "hudson-store",
+      "name": "Hudson University store and wholesale",
+      "description": "Sales of Hudson University merchandise: 8,327 online sales to 7,042 customers in 2021, and 8,230 wholesale orders from stores like Target and Walmart from 2010 to 2019.\n\nproduct lists 1,600 products (clothing, gifts, school supplies and electronics) with their vendor, category, fabric, color and price, and size the sizes each comes in. netsale gives each sale's time, customer, shipping, tax and total, and netsale_line the products, sizes, prices and quantities in it. wholesale gives each wholesale order's store and date, and wholesale_line what was in it. customer gives each customer's name, address and contacts; region the census region and division of each state; and vendor each vendor's address and contacts.\n\nThe tables link through customer_id, product_id, netsale_id and order_id; product links to vendor by the vendor's name. Good for PivotTables, comparing retail and wholesale, and joins in SQL for Excel. Hudson University store has the same online sales without the wholesale orders.",
+      "file": "hudson-store.zip",
+      "tables": 9,
+      "rows": 84259
+    },
+    {
+      "id": "hudson-u-store",
+      "name": "Hudson University store",
+      "description": "Online sales of Hudson University merchandise in 2021: 8,327 sales of 1,599 products to 7,042 customers.\n\nproduct gives each product's name, vendor, category, fabric, color and price, and product_size the sizes each comes in. sale gives each sale's time, customer, shipping, tax and total, and sale_product the products, sizes, prices and quantities in it. customer gives each customer's name, address and contacts; region the census region and division of each state; and vendor each vendor's address and contacts.\n\nThe tables link through customer_id, product_id, sale_id and vendor_id, and region links to customer by state. Good for PivotTables (sales by month, category or region), lookups (XLOOKUP), and joins in SQL for Excel.",
+      "file": "hudson-u-store.zip",
+      "tables": 7,
+      "rows": 47817
+    },
+    {
+      "id": "redcat-shoes",
+      "name": "Redcat Shoes",
+      "description": "A shoe store's business: 1,413 shoes from 65 manufacturers, 4,724 sales to 4,417 customers in the US and Canada over 2024 and 2025, and the store's 21 employees.\n\nproduct gives each shoe's name, manufacturer, materials, list price, gender (F, M or U), category (like boots, heels or sneakers), color and description. inventoryitem gives how many of each shoe are on hand in each size, and itemsize lists the sizes. sale gives each sale's date, customer, tax and shipping, and saleitem the shoes, sizes, quantities and prices in it. purchase lists the store's orders from manufacturers, with who placed each one and when it's expected. employee gives each employee's contact details, hire date and manager, and salaryemployee and wageemployee the pay of salaried and hourly employees.\n\nGood for PivotTables, lookups and joins in SQL for Excel, including tables that link on two columns (a shoe and a size).",
+      "file": "redcat-shoes.zip",
+      "tables": 12,
+      "rows": 33294
+    },
+    {
+      "id": "simpsons",
+      "name": "The Simpsons",
+      "description": "Every episode of The Simpsons from season 1 (1989) to season 31 (May 2020): 683 episodes, with their cast and crew, viewer ratings, keywords and awards.\n\nepisode gives each episode's season, number, title, summary, air date, rating and number of votes, and vote how the votes split from 1 to 10 stars. credit lists who worked on each episode and in what role, and person gives each person's birth date, birthplace, height and nickname, where known. keyword gives keywords for each episode, award the awards and nominations the show and its people received from 1990 to 2020, and character_award the characters an award was for.\n\nThe tables link through episode_id, person (a name) and award_id. credit has 138,437 rows, so this takes a while to load. The Simpsons, season 20 is the same for one season, and loads quickly.",
+      "file": "simpsons.zip",
+      "tables": 7,
+      "rows": 156704
+    },
+    {
+      "id": "simpsons-season-20",
+      "name": "The Simpsons, season 20",
+      "description": "The 21 episodes of the 20th season of The Simpsons (September 2008 to May 2009), with their cast and crew, viewer ratings, keywords and awards.\n\nepisode gives each episode's number, title, summary, air date, rating and number of votes, and vote how the votes split from 1 to 10 stars. credit lists who worked on each episode and in what role, and person gives each person's birth date, birthplace, height and nickname, where known. keyword gives keywords for each episode, award the awards and nominations for the season, and character_award the characters an award was for.\n\nThe tables link through episode_id, person (a name) and award_id. A smaller version of The Simpsons, good for learning joins before trying the whole show.",
+      "file": "simpsons-season-20.zip",
+      "tables": 7,
+      "rows": 5545
+    },
+    {
+      "id": "student-club",
+      "name": "Student club",
+      "description": "A year of one student club, 2019 to 2020: its 33 members, 42 events, budgets, expenses and income, and who came to each event.\n\nmember gives each member's name, email, position (like President or Treasurer), t-shirt size, phone, zip code and major, and major each major's department and college. event lists meetings and other events, with their dates, type, location and status, and attendance which members came to each. budget sets out each event's budget by category (like Food or Advertisement), with how much was spent and how much is left; expense lists each purchase and who made it; and income lists dues, fundraising and other money received. zip_code lists 41,877 US zip codes with their city, county and state.\n\nThe tables link through ids like rec0Si5cQ4rJRVzd6, in columns named link_to_event, link_to_member and so on. Good for practising joins in SQL for Excel and comparing budgets with spending.",
+      "file": "student-club.zip",
+      "tables": 8,
+      "rows": 42511
     }
   ]
 }
